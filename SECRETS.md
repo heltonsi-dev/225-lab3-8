@@ -11,8 +11,10 @@
 
 6) Add your mongo-secret.yaml to your kubernetes cluster manually through Rancher, or uncomment the code that references "mongo-secret".  Delete the mongo-secret.yaml from your repository.
 
-7) Go in to Rancher to also add in the following code in the kubectl shell >_ (after you replace your docker username, password and email):
+7) Browse to https://www.docker.com/products/personal/ and set up a Docker Personal Account using your Miami Email. 
 
-   "kubectl create secret docker-registry docker-creds --docker-username=roseaw --docker-password=P@ssw0rd! --docker-email=roseaw@miamioh.edu"
+8) Go in to Rancher to also add in the following code in the kubectl shell >_ (after you replace your docker username, password and email):
+
+   "kubectl create secret docker-registry docker-creds --docker-username=username --docker-password=P@ssw0rd! --docker-email=miami-id@miamioh.edu"
 
     "kubectl create secret generic mongodb-secret --from-literal=mongo-root-username=admin --from-literal=mongo-root-password=password"
